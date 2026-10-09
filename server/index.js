@@ -174,14 +174,14 @@ const throttleAuth = (request, response, next) => {
   const attempts = authAttempts.get(request.ip);
   if (attempts && attempts.resetAt > now && attempts.count >= 10) {
     return response.status(429).json({
-      error: "Juda ko‘p urinish. 15 daqiqadan keyin qayta urinib ko‘ring.",
+      error: "Juda ko‘p urinish. 1 daqiqadan keyin qayta urinib ko‘ring.",
     });
   }
   authAttempts.set(
     request.ip,
     attempts && attempts.resetAt > now
       ? { count: attempts.count + 1, resetAt: attempts.resetAt }
-      : { count: 1, resetAt: now + 15 * 60 * 1000 },
+      : { count: 1, resetAt: now + 60 * 1000 },
   );
   next();
 };
