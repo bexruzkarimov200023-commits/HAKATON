@@ -329,6 +329,7 @@
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } [data-scroll-reveal], [data-reveal] { opacity: 1; transform: none; filter: none; } .principle-bar i { transform: scaleX(1); } }
 
 .app-shell { background: var(--theme-canvas); color: var(--theme-ink); }
+.app-shell { width: 100%; max-width: 100%; overflow-x: clip; }
 .sidebar { background: var(--theme-black); border-color: #39382f; }
 .brand, .profile-name { color: #f7f5eb; }
 .brand-mark { background: var(--theme-yellow); color: var(--theme-black); border-radius: 2px; }
@@ -389,6 +390,10 @@
 .mobile-nav { background: var(--theme-black); }
 .mobile-nav .nav-link { color: #f4f1e5; }
 .mobile-nav .nav-link.active { color: var(--theme-yellow); }
+.main-content, .page-body, .summary-grid, .content-grid, .lower-grid, .bottom-grid { min-width: 0; }
+.page-body { width: 100%; }
+.summary-grid > *, .content-grid > *, .lower-grid > *, .bottom-grid > * { min-width: 0; }
+.right-stack > * { min-width: 0; }
 
 @media (min-width: 851px) and (max-width: 1150px) {
 	.sidebar { width: 206px; }
