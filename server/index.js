@@ -21,7 +21,9 @@ const sessionCookie = "moneymaster_session";
 const sessionLifetime = 1000 * 60 * 60 * 24 * 14;
 const dataFile = path.resolve(
   process.env.DATA_FILE ||
-    path.join(path.dirname(fileURLToPath(import.meta.url)), "data.json"),
+    (process.env.VERCEL
+      ? path.join("/tmp", "moneymaster-data.json")
+      : path.join(path.dirname(fileURLToPath(import.meta.url)), "data.json")),
 );
 const sessions = new Map();
 const authAttempts = new Map();
@@ -360,6 +362,10 @@ app.patch(
   },
 );
 
-app.listen(port, "127.0.0.1", () =>
-  console.log(`MoneyMaster API listening on http://127.0.0.1:${port}`),
-);
+if (!process.env.VERCEL) {
+  app.listen(port, "127.0.0.1", () =>
+    console.log(`MoneyMaster API listening on http://127.0.0.1:${port}`),
+  );
+}
+
+export default app;

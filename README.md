@@ -15,4 +15,4 @@ Run `npm run build` and `npm run lint` to verify changes.
 
 ## Deployment note
 
-This JSON-file store and in-memory session map are intended for a local hackathon demo, not a public multi-instance deployment. A public launch needs a managed database, persistent session storage, HTTPS, and operational backups.
+For a Vercel preview, set `ADMIN_EMAIL` and `ADMIN_PASSWORD` in the project's Environment Variables, then redeploy. The current JSON-file store and in-memory session map are demo-only: Vercel's `/tmp` storage and function memory are ephemeral and may not be shared across instances. A public launch needs a managed database, persistent session storage, HTTPS, and operational backups.
