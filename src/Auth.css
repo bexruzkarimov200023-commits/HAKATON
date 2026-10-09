@@ -88,7 +88,7 @@
 }
 
 @keyframes auth-spin { to { transform: rotate(360deg); } }
-@media (max-width: 760px) {
+@media (max-width: 850px) {
   .auth-screen { grid-template-columns: 1fr; }
   .auth-aside { min-height: 220px; padding: 20px 24px; }
   .auth-story { padding: 28px 0 20px; }
@@ -97,7 +97,9 @@
   .auth-main { min-height: auto; padding: 30px 24px 52px; }
   .auth-copyright { bottom: 14px; }
   .admin-topbar { padding: 0 16px; }
+  .admin-topbar { height: auto; min-height: 64px; gap: 10px; padding-top: 12px; padding-bottom: 12px; flex-wrap: wrap; }
   .admin-session { gap: 8px; }
+  .admin-session { flex-wrap: wrap; justify-content: flex-end; }
   .admin-session > span:nth-child(2) { display: none; }
   .admin-content { padding: 28px 14px; }
   .admin-title-row h1 { font-size: 22px; }
