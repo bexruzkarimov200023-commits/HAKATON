@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { ArrowRight, Eye, EyeOff, KeyRound, ShieldCheck, Wallet } from 'lucide-react'
-import './Auth.css'
 
 function AuthPanel({ onAuthenticate, error: sessionError }) {
   const [mode, setMode] = useState('login')

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ArrowDownLeft, ArrowUpRight, Ban, LogOut, RefreshCw, ShieldCheck, Users } from 'lucide-react'
 import { apiFetch } from './api.js'
-import './Auth.css'
 
 function AdminPanel({ user, onLogout, onOpenFinance }) {
   const [users, setUsers] = useState([])
