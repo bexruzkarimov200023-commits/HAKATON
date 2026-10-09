@@ -110,6 +110,24 @@
 @media (prefers-reduced-motion: reduce) { .loading-spinner { animation-duration: .01ms; } }
 
 .auth-aside { padding-inline: clamp(24px, 7vw, 104px); }
+.auth-form-wrap { max-width: 420px; }
+.auth-form-kicker { font-size: 10px; }
+.auth-form-wrap h2 { margin-top: 12px; font-size: 30px; }
+.auth-subtitle { font-size: 14px; line-height: 1.5; }
+.auth-switch { height: 48px; margin-top: 24px; }
+.auth-switch button { font-size: 14px; }
+.auth-form { gap: 18px; margin-top: 22px; }
+.auth-form > label { gap: 7px; font-size: 13px; }
+.auth-form > label > input, .password-field { height: 48px; }
+.auth-form > label > input, .password-field input { font-size: 14px; }
+.password-field button { width: 44px; height: 44px; }
+.auth-error { font-size: 12px; }
+.auth-submit { height: 48px; font-size: 14px; }
+.auth-privacy { margin-top: 16px; font-size: 11px; }
+@media (max-width: 850px) {
+  .auth-form-wrap { max-width: 440px; }
+  .auth-main { padding-top: 28px; }
+}
 @media (max-width: 850px) {
   .auth-aside { padding-inline: 24px; }
 }
