@@ -327,3 +327,77 @@
 	.mobile-nav { display: grid; align-content: start; gap: 5px; width: min(300px, 86vw); height: 100%; padding: 15px 12px; background: white; box-shadow: 12px 0 30px rgb(31 48 39 / 12%); }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } [data-scroll-reveal], [data-reveal] { opacity: 1; transform: none; filter: none; } .principle-bar i { transform: scaleX(1); } }
+
+.app-shell { background: var(--theme-canvas); color: var(--theme-ink); }
+.sidebar { background: var(--theme-black); border-color: #39382f; }
+.brand, .profile-name { color: #f7f5eb; }
+.brand-mark { background: var(--theme-yellow); color: var(--theme-black); border-radius: 2px; }
+.brand-accent, .nav-link.active, .nav-link:hover { color: var(--theme-yellow); }
+.nav-link { color: #c5c2b6; border-radius: 2px; }
+.nav-link:hover, .nav-link.active { background: #2a2922; }
+.nav-link.active::before { background: var(--theme-yellow); }
+.nav-caption, .section-kicker { color: #a9a596; }
+.sidebar-promo { background: #292820; border: 1px solid #4a4635; border-radius: 2px; }
+.sidebar-promo a, .promo-icon { color: var(--theme-yellow); }
+.avatar { background: var(--theme-yellow); color: var(--theme-black); }
+.topbar { background: #fff; border-color: var(--theme-line); }
+.breadcrumb strong { color: var(--theme-black); }
+.month-picker, .icon-button, .period-select { border-color: var(--theme-line); border-radius: 2px; color: var(--theme-ink); }
+.icon-button:hover, .period-select:hover { border-color: #b79524; color: var(--theme-black); }
+.add-button { background: var(--theme-yellow); color: var(--theme-black); border-radius: 2px; }
+.add-button:hover { background: var(--theme-black); color: var(--theme-yellow); }
+.welcome-row h1, .metric-card > strong, .panel-header h2 { color: var(--theme-black); }
+.eyebrow-line, .status-dot { background: var(--theme-yellow); }
+.balance-card { background: var(--theme-black); border-radius: 2px; }
+.balance-top, .balance-foot, .balance-foot span:last-child { color: #d7d4c8; }
+.balance-value, .balance-foot span:first-child { color: var(--theme-yellow); }
+.balance-chip { border-radius: 2px; }
+.metric-card, .panel { background: #fff; border-color: var(--theme-line); border-radius: 2px; }
+.metric-icon, .insight-icon, .estimate-icon, .credit-icon { border-radius: 2px; }
+.income-icon { background: var(--theme-yellow-soft); color: #725700; }
+.expense-icon { background: #eeece3; color: var(--theme-black); }
+.positive, .negative { background: var(--theme-yellow-soft); color: #725700; border-radius: 2px; }
+.mini-bar i, .goal-progress-track i, .principle-bar i { background: var(--theme-yellow); }
+.expense-mini i { background: var(--theme-black); }
+.segmented-control, .segmented-control button, .more-button { border-radius: 2px; }
+.segmented-control button.selected { background: var(--theme-black); color: var(--theme-yellow); }
+.green-dot, .insight-icon { background: var(--theme-yellow); color: var(--theme-black); }
+.chart-insight a, .text-link, .text-link-button { color: #806300; }
+.goal-badge, .goal-remaining, .goal-illustration, .goal-coin { border-radius: 2px; }
+.goal-badge, .goal-remaining { background: var(--theme-yellow-soft); color: #665000; }
+.goal-amount, .goal-caption b, .goal-estimate strong, .goal-remaining strong { color: var(--theme-black); }
+.goal-coin { background: var(--theme-yellow); color: var(--theme-black); }
+.goal-contribution button, .challenge-button, .modal-submit { background: var(--theme-yellow); color: var(--theme-black); border-radius: 2px; }
+.goal-contribution button:hover, .challenge-button:hover, .modal-submit:hover { background: var(--theme-black); color: var(--theme-yellow); }
+.challenge-panel { background: #fffdf4; border-color: #e6d79c; }
+.challenge-icon { background: var(--theme-yellow); color: var(--theme-black); border-radius: 2px; }
+.challenge-tag, .challenge-count strong { color: #725700; }
+.challenge-track i.done { background: var(--theme-yellow); }
+.tip-card { background: var(--theme-black); border-radius: 2px; }
+.tip-top, .tip-card button { color: var(--theme-yellow); }
+.tip-bulb { background: #343228; color: var(--theme-yellow); border-radius: 2px; }
+.credit-result strong { color: var(--theme-black); }
+.transaction-icon { border-radius: 2px; background: var(--theme-yellow-soft); color: #725700; }
+.transaction-icon.tx-income, .transaction-amount.income { color: #725700; }
+.transaction-amount { color: var(--theme-black); }
+.input-with-unit, .challenge-button, .goal-contribution button, .form-label input, .form-label select { border-radius: 2px; }
+.transaction-modal, .modal-backdrop, .type-toggle, .type-toggle button, .modal-submit { border-radius: 2px; }
+.form-label input:focus, .form-label select:focus { border-color: #b79524; }
+.principles-card, .principle-card { border-radius: 2px; }
+.needs-card .principle-top span:first-child, .wants-card .principle-top span:first-child, .savings-card .principle-top span:first-child, .principle-card > strong { color: #725700; }
+.needs-card .principle-bar i, .wants-card .principle-bar i, .savings-card .principle-bar i { background: var(--theme-yellow); }
+.mobile-nav { background: var(--theme-black); }
+.mobile-nav .nav-link { color: #f4f1e5; }
+.mobile-nav .nav-link.active { color: var(--theme-yellow); }
+
+@media (min-width: 851px) and (max-width: 1150px) {
+	.sidebar { width: 206px; }
+	.topbar, .page-body { padding-right: 22px; padding-left: 22px; }
+	.summary-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr); }
+	.content-grid, .lower-grid, .bottom-grid { grid-template-columns: minmax(0, 1.15fr) minmax(250px, .95fr); }
+	.balance-value { font-size: 22px; }
+}
+@media (max-width: 850px) {
+	.sidebar { background: var(--theme-black); }
+	.topbar { background: #fff; }
+}

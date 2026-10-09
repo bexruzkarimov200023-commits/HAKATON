@@ -10,6 +10,15 @@
 }
 
 @layer base {
+  :root {
+    --theme-black: #171715;
+    --theme-ink: #26251f;
+    --theme-yellow: #f2c431;
+    --theme-yellow-soft: #fff4c4;
+    --theme-canvas: #f5f4ee;
+    --theme-line: #dedbd0;
+    --theme-muted: #77746a;
+  }
   * { box-sizing: border-box; }
   html { min-width: 320px; scroll-behavior: smooth; }
   body { min-width: 320px; min-height: 100vh; margin: 0; font-family: var(--font-sans); }

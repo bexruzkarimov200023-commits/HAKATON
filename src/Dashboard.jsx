@@ -19,12 +19,12 @@ const money = (value) => `${formatNumber.format(Math.round(value || 0))} so'm`
 const compact = (value) => value >= 1_000_000 ? `${(value / 1_000_000).toFixed(value % 1_000_000 === 0 ? 0 : 1)} mln` : value >= 1_000 ? `${Math.round(value / 1_000)} ming` : `${Math.round(value)}`
 
 const categories = [
-  { name: 'Oziq-ovqat', color: '#f2a65a', icon: Coffee },
-  { name: 'Transport', color: '#79a9a0', icon: CarFront },
-  { name: "O'yin-kulgi", color: '#d98170', icon: Gamepad2 },
-  { name: 'Xaridlar', color: '#8e9fd2', icon: ShoppingBag },
-  { name: 'Uy va aloqa', color: '#b391c9', icon: Home },
-  { name: 'Boshqa', color: '#d4bc68', icon: MoreHorizontal },
+  { name: 'Oziq-ovqat', color: '#f2c431', icon: Coffee },
+  { name: 'Transport', color: '#292820', icon: CarFront },
+  { name: "O'yin-kulgi", color: '#c79d18', icon: Gamepad2 },
+  { name: 'Xaridlar', color: '#77746a', icon: ShoppingBag },
+  { name: 'Uy va aloqa', color: '#d9d3bf', icon: Home },
+  { name: 'Boshqa', color: '#ad741e', icon: MoreHorizontal },
 ]
 const navItems = [
   { label: 'Umumiy', href: '#overview', icon: Home },
