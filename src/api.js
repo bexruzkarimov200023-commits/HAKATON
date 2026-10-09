@@ -14,6 +14,12 @@ export async function apiFetch(path, options = {}) {
       ...options.headers,
     },
   });
+  const contentType = response.headers.get("content-type") || "";
+  if (!contentType.includes("application/json"))
+    throw new ApiError(
+      "Server API JSON javob bermadi. Vercel deploy sozlamalarini tekshiring.",
+      502,
+    );
   const payload = await response.json().catch(() => ({}));
   if (!response.ok)
     throw new ApiError(payload.error || "So‘rov bajarilmadi.", response.status);
