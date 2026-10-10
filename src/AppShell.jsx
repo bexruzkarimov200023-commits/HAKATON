@@ -4,8 +4,10 @@ import AdminPanel from './AdminPanel.jsx'
 import AuthPanel from './AuthPanel.jsx'
 import Dashboard from './Dashboard.jsx'
 import { ApiError, apiFetch } from './api.js'
+import { useLanguage } from './i18n.jsx'
 
 function AppShell() {
+  const { translate } = useLanguage()
   const [user, setUser] = useState(null)
   const [finance, setFinance] = useState(null)
   const [view, setView] = useState('dashboard')
@@ -87,9 +89,9 @@ function AppShell() {
     }
   }
 
-  if (!ready) return <main className="auth-loading"><LoaderCircle size={24} className="loading-spinner" /><span>MoneyMaster yuklanmoqda</span></main>
+  if (!ready) return <main className="auth-loading"><LoaderCircle size={24} className="loading-spinner" /><span>{translate('MoneyMaster yuklanmoqda')}</span></main>
   if (!user) return <AuthPanel onAuthenticate={authenticate} error={error} />
-  if (!finance) return <main className="auth-loading"><LoaderCircle size={24} className="loading-spinner" /><span>Hisob ma’lumotlari yuklanmoqda</span></main>
+  if (!finance) return <main className="auth-loading"><LoaderCircle size={24} className="loading-spinner" /><span>{translate('Hisob ma’lumotlari yuklanmoqda')}</span></main>
   if (user.role === 'admin' && view === 'admin') {
     return <AdminPanel user={user} onLogout={logout} onOpenFinance={() => setView('dashboard')} />
   }

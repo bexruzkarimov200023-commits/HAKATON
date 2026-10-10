@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ArrowRight, Eye, EyeOff, KeyRound, ShieldCheck, Wallet } from 'lucide-react'
+import { LanguageSelect, Localized } from './i18n.jsx'
 
 function AuthPanel({ onAuthenticate, error: sessionError }) {
   const [mode, setMode] = useState('login')
@@ -23,7 +24,7 @@ function AuthPanel({ onAuthenticate, error: sessionError }) {
   }
 
   return (
-    <main className="auth-screen">
+    <Localized><main className="auth-screen">
       <div className="auth-aside">
         <a className="auth-brand" href="#login"><span><Wallet size={23} /></span> money<span>master</span></a>
         <div className="auth-story"><span className="auth-eyebrow"><i /> PULINGIZNI BOSHQARISH VAQTI</span><h1>Rejalaringizga<br />aniq yo‘l oching.</h1><p>Har bir xarajatni anglang. Har bir maqsadga yaqinlashing.</p><div className="auth-stat"><div><strong>50 / 30 / 20</strong><span>oddiy budjet qoidasi</span></div><div className="stat-dots"><i /><i /><i /></div></div></div>
@@ -31,6 +32,7 @@ function AuthPanel({ onAuthenticate, error: sessionError }) {
         <div className="auth-pattern" />
       </div>
       <section className="auth-main" id="login">
+        <LanguageSelect />
         <div className="auth-form-wrap">
           <span className="auth-form-kicker"><KeyRound size={14} /> SHAXSIY HISOB</span>
           <h2>{isRegister ? 'Hisob yarating' : 'Hisobingizga kiring'}</h2>
@@ -47,7 +49,7 @@ function AuthPanel({ onAuthenticate, error: sessionError }) {
         </div>
         <span className="auth-copyright">© 2026 MoneyMaster UZ</span>
       </section>
-    </main>
+    </main></Localized>
   )
 }
 

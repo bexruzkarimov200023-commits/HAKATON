@@ -31,6 +31,9 @@
 }
 
 @layer components {
+	.language-select { @apply inline-flex h-8 items-center rounded border border-[#dedbd0] bg-white px-2 text-[11px] font-semibold text-[#26251f]; }
+	.language-select select { @apply cursor-pointer border-0 bg-transparent outline-none; }
+	.auth-main > .language-select { position: absolute; top: 20px; right: 24px; }
   .auth-screen { @apply grid min-h-screen grid-cols-[minmax(0,1.1fr)_minmax(380px,.9fr)] bg-[#f4f6f1]; }
   .auth-aside { @apply relative flex min-h-screen flex-col justify-between overflow-hidden bg-[#294c3d] px-[7vw] py-10 text-white; background-image: radial-gradient(ellipse at 70% 20%, #77915b45, transparent 34%), linear-gradient(145deg, #263f34, #365b45); }
   .auth-brand { @apply relative z-[1] inline-flex w-fit items-center gap-1.5 font-display text-[18px] font-bold text-white no-underline; }
